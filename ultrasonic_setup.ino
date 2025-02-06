@@ -32,5 +32,5 @@ void loop() {
   serializeJson(data, Serial);
   Serial.println();
 
-  delay(500);
+  delay(50);
 }
