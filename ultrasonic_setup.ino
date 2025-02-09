@@ -1,9 +1,5 @@
-#include <ArduinoJson.h>
-
 #define trigPin 13
 #define echoPin 12
-
-JsonDocument data;
 
 
 void setup() {
@@ -26,11 +22,7 @@ void loop() {
   // convert distance to mm
   distance = duration/2/2.91;
 
-  data["duration"] = duration;
-  data["distance_mm"] = distance;
-
-  serializeJson(data, Serial);
-  Serial.println();
+  Serial.println(distance);
 
   delay(50);
 }
